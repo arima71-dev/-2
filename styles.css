@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 150px;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center; /* Центрирует содержимое по вертикали */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    position: relative;
+}
+
+.header .logo {
+    max-width: 100px;
+    position: absolute;
+    left: 20px;
+}
+
+.menu {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex; /* Используем Flexbox */
+    margin: 0 10px; /* Отступ между контейнером и краем окна */
+    overflow: hidden;
+}
+
+.content {
+    flex: 1; /* Позволяет контенту занимать все доступное пространство */
+    min-height: 400px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 200px; /* Ширина правой колонки */
+    min-height: 300px;
+    background-color: #e7e7e7;
+    padding: 20px;
+}
+
+.footer {
+    height: 100px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    clear: both; /* Очищаем поток после флоатов */
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-form label {
+    margin-top: 10px;
+}
+
+@media print {
+    .header, .menu, .sidebar, .footer {
+        display: none; /* При печати скрываем все, кроме контента */
+    }
+    .content {
+        width: 100%; /* Контент занимает всю ширину при печати */
+    }
+}
